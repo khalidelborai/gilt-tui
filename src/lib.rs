@@ -44,6 +44,9 @@ pub mod render;
 pub mod app;
 pub mod screen;
 
+// Testing
+pub mod testing;
+
 // Proc macros (feature-gated)
 #[cfg(feature = "macros")]
 pub use gilt_tui_macros::{view, css};
