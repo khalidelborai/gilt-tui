@@ -1,0 +1,30 @@
+[package]
+name = "gilt-tui"
+version = "0.1.0"
+edition = "2021"
+description = "A CSS-styled, declarative terminal UI framework built on gilt"
+license = "MIT"
+repository = "https://github.com/khalidelborai/gilt-tui"
+keywords = ["tui", "terminal", "css", "ui", "framework"]
+categories = ["command-line-interface", "gui"]
+rust-version = "1.82.0"
+
+[dependencies]
+gilt = { version = "0.1.0", path = "../gilt" }
+slotmap = "1.0"
+taffy = "0.9"
+crossterm = { version = "0.29", features = ["event-stream"] }
+tokio = { version = "1", features = ["rt", "macros", "sync", "time"] }
+logos = "0.15"
+thiserror = "2"
+
+gilt-tui-macros = { version = "0.1.0", path = "../gilt-tui-macros", optional = true }
+
+[features]
+default = []
+macros = ["dep:gilt-tui-macros"]
+
+[dev-dependencies]
+insta = "1"
+tokio-test = "0.4"
+pretty_assertions = "1"
