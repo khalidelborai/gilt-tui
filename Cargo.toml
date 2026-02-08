@@ -1,3 +1,6 @@
+[workspace]
+members = [".", "macros"]
+
 [package]
 name = "gilt-tui"
 version = "0.1.0"
@@ -20,7 +23,7 @@ tokio = { version = "1", features = ["rt", "macros", "sync", "time"] }
 logos = "0.15"
 thiserror = "2"
 
-gilt-tui-macros = { version = "0.1.0", path = "../gilt-tui-macros", optional = true }
+gilt-tui-macros = { version = "0.1.0", path = "macros", optional = true }
 
 [features]
 default = []
